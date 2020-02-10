@@ -29,8 +29,6 @@ namespace PostBoy
             //ENVItems
             StringBuilder EnvironmentTS = new StringBuilder();
 
-            //args = new string[] { @"C:\Users\szhlo\Dropbox\WORK\CoreSite\Projects\Mule393Upgrade\UpgradeEfforts\NodeJS_API.postman_collectionwFolders.json", @"C:\Users\szhlo\Dropbox\WORK\CoreSite\Projects\Mule393Upgrade\UpgradeEfforts\APIMocks_CS.postman_environment.json" };
-
             if (args.Length > 0)
             {
                 //Collection
@@ -134,8 +132,8 @@ namespace PostBoy
 
 
                     //File write
-                    File.WriteAllText(Path.Combine(Path.GetDirectoryName(args[0]), $"{CollectionName}Routes.js"), SBRouteFile.ToString().Replace("{{$guid}}", "uuidv4()"));
-                    File.WriteAllText(Path.Combine(Path.GetDirectoryName(args[0]), $"{CollectionName}App.js"), NodeappTemplate.Replace("###RoutefileName###", CollectionName));
+                    File.WriteAllText(Path.Combine(appPath, $"{CollectionName}Routes.js"), SBRouteFile.ToString().Replace("{{$guid}}", "uuidv4()"));
+                    File.WriteAllText(Path.Combine(appPath, $"{CollectionName}App.js"), NodeappTemplate.Replace("###RoutefileName###", CollectionName));
                 }
 
 
