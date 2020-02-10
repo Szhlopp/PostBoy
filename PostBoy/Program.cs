@@ -29,7 +29,7 @@ namespace PostBoy
             //ENVItems
             StringBuilder EnvironmentTS = new StringBuilder();
 
-            args = new string[] { @"C:\Users\szhlo\Dropbox\WORK\CoreSite\Projects\Mule393Upgrade\UpgradeEfforts\NodeJS_API.postman_collectionwFolders.json", @"C:\Users\szhlo\Dropbox\WORK\CoreSite\Projects\Mule393Upgrade\UpgradeEfforts\APIMocks_CS.postman_environment.json" };
+            //args = new string[] { @"C:\Users\szhlo\Dropbox\WORK\CoreSite\Projects\Mule393Upgrade\UpgradeEfforts\NodeJS_API.postman_collectionwFolders.json", @"C:\Users\szhlo\Dropbox\WORK\CoreSite\Projects\Mule393Upgrade\UpgradeEfforts\APIMocks_CS.postman_environment.json" };
 
             if (args.Length > 0)
             {
@@ -154,7 +154,7 @@ namespace PostBoy
             }
             else
             {
-                Console.WriteLine($"Post boy requires a file. Give file please");
+                Console.WriteLine($"Post boy requires a file.\r\nPlease set the first argument to the main Collection Export (v2.1)\r\nThe second optional argument can be the envionment export file\r\nThe third it optional, if '1', will generate singular module and ignore folders");
             }
 
             
